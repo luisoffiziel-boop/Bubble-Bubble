@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUBBLE BUBBLE 💗</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Arial,sans-serif;background:linear-gradient(135deg,#fff0fa,#eaf7ff);color:#45233f}
+  nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);padding:18px 7%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 3px 15px #e8cce2}
+  .logo{font-size:25px;font-weight:900;color:#ef62ad}
+  nav a{margin-left:22px;text-decoration:none;color:#45233f;font-weight:bold}
+  nav a:hover{color:#ef62ad}
+  .hero{min-height:78vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:50px 20px;position:relative;overflow:hidden}
+  .hero:before,.hero:after{content:"🫧";position:absolute;font-size:100px;opacity:.35}
+  .hero:before{left:7%;top:18%}.hero:after{right:8%;bottom:15%}
+  h1{font-size:clamp(60px,12vw,130px);color:#ef62ad;text-shadow:4px 5px 0 white}
+  .tagline{font-size:24px;margin:12px 0 28px}
+  .btn{display:inline-block;background:#ef62ad;color:white;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:bold;box-shadow:0 7px 15px #e8a7cf}
+  section{padding:70px 8%;max-width:1100px;margin:auto}
+  h2{text-align:center;font-size:42px;color:#e856a6;margin-bottom:35px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+  .card{background:white;border-radius:28px;padding:28px;text-align:center;box-shadow:0 8px 25px #e7d3e2}
+  .avatar{font-size:70px;margin-bottom:12px}
+  .card h3{font-size:25px;margin-bottom:8px}
+  .role{color:#e856a6;font-weight:bold}
+  .info{background:rgba(255,255,255,.65);border-radius:30px;padding:30px;line-height:1.8;text-align:center}
+  footer{text-align:center;padding:35px;background:#45233f;color:white}
+  .bubble{font-size:25px}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">🫧 BUBBLE BUBBLE</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#members">Mitglieder</a>
+    <a href="#music">Musik</a>
+    <a href="#agency">Agency</a><a href="#fanclub">Fanclub</a>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div>
+    <div class="bubble">🫧 💗 🫧 ✨ 🫧</div>
+    <h1>BUBBLE BUBBLE</h1>
+    <p class="tagline">Three hearts. One dream. One bubble. 💕</p>
+    <a class="btn" href="#members">Unsere Mitglieder ✨</a>
+  </div>
+</section>
+
+<section id="members">
+  <h2>🌸 Unsere Mitglieder</h2>
+  <div class="cards">
+    <article class="card">
+      <div class="avatar">🌸</div>
+      <h3>Mary</h3>
+      <p class="role">Leader • Main Vocal</p>
+      <p>Die starke Stimme von BUBBLE BUBBLE.</p>
+    </article>
+    <article class="card">
+      <div class="avatar">⭐</div>
+      <h3>Lisa</h3>
+      <p class="role">Main Dancer • Main Rapper</p>
+      <p>Energie, Tanz und jede Menge Charisma.</p>
+    </article>
+    <article class="card">
+      <div class="avatar">🦋</div>
+      <h3>Tamara</h3>
+      <p class="role">Lead Vocal • Visual</p>
+      <p>Eine wunderschöne Stimme mit besonderem Charme.</p>
+    </article>
+  </div>
+</section>
+
+<section id="music">
+  <h2>🎵 Musik</h2>
+  <div class="info">
+    <h3 style="font-size:30px">Debüt: „Bubble Pop!“ 🫧</h3>
+    <p>Das Debüt von BUBBLE BUBBLE: fröhlich, funkelnd und voller Energie.</p>
+    <br>
+    <p><strong>Fandom:</strong> Bubblies 💕</p>
+    <p><strong>Debütjahr:</strong> 2026</p>
+    <p><strong>Slogan:</strong> „Dream big, shine bright, BUBBLE BUBBLE!“ ✨</p>
+  </div>
+</section>
+
+<section id="agency">
+  <h2>🍓 Ichigo Production Entertainment</h2>
+  <div class="info">
+    <p><strong>Ichigo Production Entertainment</strong> ist die Entertainment-Agentur von BUBBLE BUBBLE.</p>
+    <p>Hier begann die Geschichte von Mary, Lisa und Tamara – von ihren ersten Trainingstagen bis zum großen Debüt. 🫧</p>
+  </div>
+</section>
+
+<section id="fanclub">
+  <h2>🫧 Bubblies Club</h2>
+  <div class="info">
+    <h3 style="font-size:30px">💕 Werde ein Bubbly!</h3>
+    <p>Schließe dich dem offiziellen Fanclub von BUBBLE BUBBLE an und werde Teil unserer Bubble!</p>
+    <form onsubmit="joinClub(event)" style="max-width:520px;margin:25px auto 0;text-align:left">
+      <label>Name</label>
+      <input id="fanName" required placeholder="Dein Name" style="width:100%;padding:13px;margin:7px 0 16px;border:2px solid #f1c8e2;border-radius:14px">
+      <label>E-Mail-Adresse</label>
+      <input id="fanEmail" type="email" required placeholder="deine@email.de" style="width:100%;padding:13px;margin:7px 0 16px;border:2px solid #f1c8e2;border-radius:14px">
+      <label>Lieblingsmitglied</label>
+      <select id="fanMember" style="width:100%;padding:13px;margin:7px 0 20px;border:2px solid #f1c8e2;border-radius:14px">
+        <option>Mary 🌸</option><option>Lisa ⭐</option><option>Tamara 🦋</option><option>Alle drei 🫧</option>
+      </select>
+      <button class="btn" type="submit" style="border:0;cursor:pointer">Fanclub beitreten 🫧</button>
+    </form>
+    <p id="clubMessage" style="margin-top:20px;font-weight:bold"></p>
+    <p style="margin-top:20px">📧 Fanclub-Kontakt: <strong>ichigoinfo@gmail.com</strong></p>
+    <p style="margin-top:10px">📞 Ichigo Production Entertainment: <strong>+49 176 61525927</strong></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  🫧 BUBBLE BUBBLE • Ichigo Production Entertainment • Made with 💗
+</footer>
+
+<script>
+function joinClub(event) {
+  event.preventDefault();
+  const name = document.getElementById("fanName").value;
+  document.getElementById("clubMessage").textContent =
+    "Willkommen im Bubblies Club, " + name + "! 🫧💕 Deine Anmeldung wurde auf dieser Demo-Seite angenommen.";
+}
+</script>
+
+</body>
+</html>
